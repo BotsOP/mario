@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<title>Mario</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+	$("#btn").click(function(){
+        $("#btn").addClass("animation");
+        $(".info").addClass("pop-up")
+    });
+    $("nav ul li").on('click', function() {
+    	$("li.active2").removeClass('active2');
+    	$(this).addClass('active2');
+
+    	var boxToShow = $(this).attr('rel');
+
+    	$('.active').fadeOut(500, showNextPanel)
+
+    	function showNextPanel() {
+    		$(this).removeClass('active');
+
+    		$("#"+boxToShow).fadeIn(500, function() {
+    			$(this).addClass('active');
+    		});
+    	};
+    });
+
+    $(".button").on('click', function() {
+    	//$("li.active2").removeClass('active2');
+    	//$(this).addClass('active2');
+
+    	var panelToShow = $(this).attr('rel');
+
+    	$('.active3').fadeOut(500, showNextPanel2)
+
+    	function showNextPanel2() {
+    		$(this).removeClass('active3');
+
+    		$("#"+panelToShow).fadeIn(500, function() {
+    			$(this).addClass('active3');
+    		});
+    	};
+    });
+});
+
+</script>
+
+</head>
+<body>
+
+<img class="cloud" src="img/cloud.png">
+      <img class="cloud" src="img/cloud.png">
+
+   <div class="sky"></div>
+
+   <div class="grass">
+   	   <div class="text" id="btn">Let's, GO <img class="marioimg" src="img/minimario.png"></div>
+   </div>
+   </div>
+
+   <div class="road">
+      <div class="lines"></div>
+      <img class="mario" src="img/mariocar.png">
+      <img class="luigi" src="img/luigicar.png">
+   </div>
+
+   <div class="info">
+      <div class="head">
+         Mario info
+      </div>
+      <hr>
+      <nav>
+         <ul>
+            <li rel="box1" class="active2">Mario</li>
+            <li rel="box2">Luigi</li>
+            <li rel="box3">Mario Games</li>
+            <li rel="box4">Verschijning</li>
+         </ul>
+      </nav>
+      <div class="page">
+         <div class="head2">
+            It's-a me Mario!
+         </div>
+        <div class="text2 active" id="box1">
+         	<img src="img/mario.png" class="marioimg2">
+         	<div class="head3">
+         		Mario 
+         	</div>
+         	<div class="text3">
+         		Mario is ongetwijfeld een van de bekendste videospelpersonages. De kleine dikke loodgieter rent, springt, klimt, vliegt en zwemt zich een weg door allerlei levels met als uiteindelijke doel om Prinses Peach te bevrijden van Bowser.
+         	</div>
+
+         	</div>
+         <div class="text2" id="box2">
+         	<img src="img/luigi.png" class="marioimg2">
+         	<div class="head3">
+         		Luigi
+         	</div>
+         	<div class="text3">
+         		Luigi zal weer aan moeten treden om een zooi koppige geesten te verbannen uit enkele superspookachtige landhuizen in Luigi's Mansion 2 voor Nintendo 3DS. Gewapend met zijn vertrouwde "Poltergust"-stofzuiger voor het vangen van geesten is Mario's broer de aangewezen persoon om deze irritante fantomen te vangen. Natuurlijk, Luigi is snel zenuwachtig en is liever ver verwijderd van deze geesten, maar ook een onwillige held kan ons redden!
+         	</div>
+         </div>
+
+         <div class="text2" id="box3">
+         	<div class="button-group">
+         		<div class="button" rel="panel1">
+         			Super Mario Bros
+         		</div>
+         		<div class="button" rel="panel2">
+         			Super Mario Bros 2
+         		</div>
+         		<div class="button" rel="panel3">
+         			Super Mario Bros 3
+         		</div>
+         		<div class="button" rel="panel4">
+         			Mario Kart 64
+         		</div>
+         		<div class="button" rel="panel5">
+         			Yoshi's Island DS
+         		</div>
+         		<div class="button" rel="panel6">
+         			Super Mario 3D Land
+         		</div>
+         		<div class="button" rel="panel7">
+         			New Super Mario Bros
+         		</div>
+         		<div class="button" rel="panel8">
+         			New Super Mario Bros 2
+         		</div>
+         	</div>
+         	<div class="info2">
+         	<div class="info3 active3" id="panel1">
+         		<img src="img/Mariobros.png" class="mariobros">
+         		<div class="head4">
+         			Super Mario Bros
+         		</div>
+         		<div class="text4">
+         			You'll have to think fast and move even faster to complete this quest! The Mushroom Princess is being held captive by the evil Koopa tribe of turtles. It's up to you to rescue her from the clutches of the Koopa King before time runs out. But it won't be easy. To get to the Princess, you'll have to climb mountains, cross seas, avoid bottomless pits, fight off turtle soldiers and host of black magic traps that only a Koopa King can devise. It's another non-stop adventure from the SUPER MARIO BROS.!
+         		</div>
+         	</div>
+
+         	<div class="info3" id="panel2">
+         		<img src="img/mariobros2.png" class="mariobros">
+         		<div class="head4">
+         			Super Mario Bros 2
+         		</div>
+         		<div class="text4">
+         			One evening, Mario had a strange dream. He dreamt of a long, long stairway leading up to a door. As soon as the door opened, he was confronted with a world he had never seen before, spreading out as far as his eyes could see. When he strained his ears to listen, he heard a faint voice saying "Welcome to 'Subcon', the land of dreams. We have been cursed by Wart and we are completely under his evil spell. We have been awaiting your arrival. Please defeat Wart and return Subcon to its natural state. The curse Wart has put on you in the real world will not have any effect upon you here. Remember, Wart hates vegetables. Please help us!
+         		</div>
+         	</div>
+
+         	<div class="info3" id="panel3">
+         		<img src="img/mariobros3.png" class="mariobros">
+         		<div class="head4">
+         			Super Mario Bros 3
+         		</div>
+         		<div class="text4 extra">
+         			Mario and Luigi are out and about in the Mushroom Kingdom. Traveling in the worlds, Mario and Luigi are asked for help by a Toad who serves the king. The servant pleas for Mario and Luigi help as the king as the land's magic wand had been stolen and the king transformed into an animal. Agreeing to help, our heroes stumble upon an airship. Climbing upon the anchor of the flying vessel, they fought to the cabin of the ship and discovers the thief who stole the magic wand. One of Bowser's eight children, a Koopaling, Larry Koopa. They defeat the Koopaling and returns the magic wand to the king transforming him back to his normal state. But the adventure is far from over. Mario and Luigi must traverse across seven kingdoms of the Mushroom World in order to defeat the Koopas and restore order to the lands. While they were out adventuring, Bowser takes advantage of the time to kidnap Princess Peach and take her to his castle in Dark Land.
+         		</div>
+         	</div>
+
+         	<div class="info3" id="panel4">
+         		<img src="img/mariokart.png" class="mariobros extraimg">
+         		<div class="head4 extrahead">
+         			Mario Kart 64
+         		</div>
+         		<div class="text4 extra2">
+         			Mario Kart 64 was released on the Virtual Console in 2007. However, ghosts cannot be saved, as this originally required a seperate peripheral. It has new courses and features that will be in later Mario Kart games like Wario Stadium and Sherbet Land. This was also placed Number 4 in Nintendo Power's Greatest Games of All Time in 1997.
+         		</div>
+         	</div>
+
+         	<div class="info3" id="panel5">
+         		<img src="img/yoshi.png" class="mariobros extraimg">
+         		<div class="head4">
+         			Yoshi's Island DS
+         		</div>
+         		<div class="text4 extra2">
+         			Once a floating island appears over Yoshi's Island, all the kids on Yoshi's Island get kidnapped by Kamek. The stork manages to save Baby Mario and Baby Peach, though, and gives the duo to Yoshi. Now, the three must go off and save the other babies.
+         		</div>
+         	</div>
+
+         	<div class="info3" id="panel6">
+         		<img src="img/mario3d.png" class="mariobros extraimg">
+         		<div class="head4 extrahead2">
+         			Super Mario 3D Land
+         		</div>
+         		<div class="text4 extra2">
+         			Super Mario 3D Land draws many of its features from the 2D Mario games. Collecting stars, which has been the main goal of the 3D games since Super Mario 64 (with the exception of Super Mario Sunshine, which used Shine Sprites instead), has been omitted from the game in favor of the flagpole goal from Super Mario Bros.
+         		</div>
+         	</div>
+
+         	<div class="info3" id="panel7">
+         		<img src="img/newsupermario.png" class="mariobros extraimg">
+         		<div class="head4 extrahead3">
+         			New Super Mario Bros
+         		</div>
+         		<div class="text4 extra2">
+         			The game begins with Mario and Princess Peach taking a walk outside the castle. Suddenly, while Peach's Castle is in view from them, a cloud goes over the castle, and lightning starts to strike it {possibly Lakithunder}. All the Toads start to scream and jump out of the castle, and Mario goes over to help, expecting that Peach would be okay. While Mario runs over to the castle, Bowser Jr. sneaks up behind her, and kidnaps Peach. Mario looks back, realizes this, and starts to run toward him. Bowser Jr. will then throw a Koopa Shell at Mario making him Small Mario and hide inside the nearest Tower with Peach.
+         		</div>
+         	</div>
+
+         	<div class="info3" id="panel8">
+         		<img src="img/newsupermario2.png" class="mariobros extraimg">
+         		<div class="head4 extrahead4">
+         			New Super Mario Bros 2
+         		</div>
+         		<div class="text4 extra2">
+         			The game continues to use the general gameplay mechanics from previous New Super Mario Bros. titles. Players are able to play as both Mario and Luigi, supporting 2-player co-op. The Super Leaf returns as a power-up, and functions much more like it did in Super Mario Bros. 3 in which Mario was given a pair of raccoon ears and a tail which allowed him to fly for a short time and slowly float to the ground
+         		</div>
+         	</div>
+
+         	</div>
+      </div>
+       <div class="text2" id="box4">
+         	<img src="img/marioschepper.jpg" class="marioimg2">
+         	<div class="head3 extrahead5">
+         		Verschijning
+         	</div>
+         	<div class="text3 extra4">
+         		Mario maakte zijn debuut in het arcadespel Donkey Kong in 1981. In Donkey Kong Junior in 1982 was hij de schurk en in het eindfilmpje gaat hij knock out (maar hij is niet dood aangezien hij opnieuw verschijnt in latere spellen). De spellen waren erg succesvol en werden daardoor er ook een arcade spin-off verscheen, Mario Bros. in 1983, dat een twee-speler modus bevatte en ook zijn langere doch jongere broer Luigi introduceerde. Zijn volgende verschijning was in Super Mario Bros. voor het Nintendo Entertainment System (NES).
+         	</div>
+   </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,389 @@
+html, body {
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+
+}
+
+.grass .sky .road {
+	position: relative;
+	float: both;
+}
+
+.sky {
+	height: 40%;
+	background: skyblue;
+}
+
+.grass {
+	height: 30%;
+	background: seagreen;
+}
+
+.road {
+	height: 30%;
+	background: dimgrey;
+	border-top: 10px solid gray;
+	border-bottom: 10px solid gray;
+	width: 100%;
+}
+
+.lines {
+	border: 5px dashed #fff;
+	height: 0px;
+	position: absolute;
+	top: 85%;
+	width: 100%;
+}
+
+.mario {
+	position: absolute;
+	top: 68%;
+	animation: driveM 3s both infinite ease-in, jump 0.3s 2s ease;
+}
+
+.luigi {
+	position: absolute;
+	top: 83%;
+	animation-name: driveL;
+	animation-duration: 30s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	animation-direction: reverse;
+	animation-timing-function: linear;
+	animation-delay: 6s;
+}
+
+.cloud {
+	position: absolute;
+}
+
+.cloud:nth-child(1){
+	width: 200px;
+	top: 120px;
+	opacity: 0.5;
+	animation: wind 80s linear infinite reverse;
+}
+
+.cloud:nth-child(2){
+	width: 300px;
+	animation: wind 50s linear infinite reverse;
+}
+
+.text {
+	position: absolute;
+	left: 42%;
+	top: 50%;
+	width: 222px;
+	padding: 15px;
+	background: #FBEFEF;
+	font-size: 200%;
+	font-family: mario; 
+	color: #FE2E2E;
+	border: 3px solid #FE2E2E;
+	box-shadow: 20px 20px 200px black;
+	border-radius: 5px;
+}
+.animation {
+	animation: btn 1s both ease-out;
+}
+
+.marioimg {
+	width: 30px;
+	height: 30px;
+	transition: 500ms transform ease-in-out;
+	transform: rotateX(90deg);
+	transform-origin: bottom;
+}
+
+.text:hover {
+	background: #FE2E2E;
+	border: 5px solid #FBEFEF;
+	color: #FBEFEF;
+	border-radius: 5px;
+}
+
+.text:hover .marioimg {
+	transform: rotateX(0deg);
+}
+
+.niks {
+	position: relative;
+	padding: 35px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.info {
+	position: absolute;
+	width: 900px;
+	height: 550px;
+	top: 100%;
+	left: 50%;
+	margin-left: -450px;
+	margin-right: 275px;
+	background: #FBEFEF;
+	border: 3px solid #FE2E2E;
+	border-radius: 10px;
+	font-family: mario;
+}
+
+.pop-up {
+	animation: pop-up 0.75s 0.75s both ease-in-out;
+}
+
+.head {
+	padding: 10px;
+	width: 189px;
+	font-size: 180%;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.page {
+	background: white;
+	width: 680px;
+	height: 450px;
+	margin-top: -460px;
+	margin-left: 200px;
+	border: 1px solid #E6E6E6;
+	border-radius: 10px;
+}
+
+.head2 {
+	padding: 25px;
+	padding-bottom: 10px;
+}
+
+.page .active {
+	display: initial;
+}
+
+.active2 {
+	color: red;
+}
+
+.text2 {
+	margin: 0 5px;
+	height: 393px;
+	border-radius: 10px;
+	font-family: normal;
+	display: none;
+
+}
+
+.marioimg2 {
+	margin-top: 40px;
+	width: 200px;
+	height: 300px;
+}
+
+.head3 {
+	font-family: bold;
+	float: right;
+	margin: 50px 250px 10px 10px;
+	padding: 10px;
+	font-size: 200%;
+}
+
+.text3 {
+	float: right;
+	position: relative;
+	top: -220px;
+	left: -50px;
+	font-size: 110%;
+	width: 45%;
+}
+
+.button-group {
+	width: 650px;
+	position: relative;
+	display: inline-block;
+	left: 1.5%;
+}
+
+.button {
+	padding: 5px;
+	width: 153px;
+	float: left;
+	background: #FBEFEF;
+	border: 2px solid #FE2E2E;
+	margin: 1px;
+	border-radius: 5px;
+	color: #FE2E2E;
+}
+
+.button:hover {
+	color: #FBEFEF;
+	background: #FE2E2E;
+}
+
+.info2 {
+	position: relative;
+	width: 95%;
+	left: 3%;
+	height: 68%;
+	padding: 25px;
+}
+
+.mariobros {
+	width: 30%;
+	font-family: bold;
+	border: 5px solid red;
+	position: absolute;
+}
+
+.head4 {
+	float: right;
+	position: relative;
+	right: 15%;
+	font-family: bold;
+	font-size: 200%;
+}
+
+.text4 {
+	float: right;
+	position: relative;
+	width: 60%;
+	bottom: 73%;
+	font-size: 100%;
+}
+
+.extra {
+	position: relative;
+	bottom: 80%;
+	width: 70%;
+	font-size: 95%;
+	left: 4%;
+}
+
+.extra2 {
+	position: absolute;
+	float: right;
+	width: 50%;
+	top: 25%;
+	left: 43%;
+}
+
+.extraimg {
+	width: 40%;
+	position: relative;
+	right: 5%;
+}
+
+.extra3 {
+	position: relative;
+	top: -65%;
+}
+
+.extra4 {
+	position: absolute;
+	left: 55%;
+	top: 40%;
+	width: 35%;
+}
+
+.extrahead {
+	position: relative;
+	left: -25%;
+}
+
+.extrahead2 {
+	position: relative;
+	left: -11%;
+}
+
+.extrahead3 {
+	position: relative;
+	left: -6%;
+}
+
+.extrahead4 {
+	position: relative;
+	left: -2.5%;
+}
+
+.extrahead5 {
+	position: relative;
+	left: 9%;
+	bottom: 8%;
+}
+
+.info3 {
+	display: none;
+}
+
+.active3 {
+	display: block;
+}
+
+nav ul {
+	height: 450px;
+	width: 20%;
+	border-right: 2.5px solid gray;
+}
+
+nav ul li {
+	margin: 10px 0;
+}
+
+hr {
+	margin: 0 3px;
+	border: 1px solid gray;
+}
+
+a {
+	text-decoration: none;
+	
+}
+
+
+@keyframes driveM{
+	from{ left: -119px; }
+	to{ left: 100%; }
+}
+
+@keyframes driveL{
+	from{ left: -119px; }
+	to{ left: 100%; }
+}
+
+@keyframes wind {
+	from{left: -300px;}
+	to{left: 100%;}
+}
+
+@keyframes jump{
+	0%{top: 68%;}
+	50%{ top: 60%; }
+	100%{ top: 68%; }
+}
+
+@keyframes btn{
+	0%{ top: 50%; }
+	25%{ top: 55%; }
+	100%{ top: -100%; }
+}
+
+@keyframes pop-up{
+	0%{top: 100%;}
+	75%{top: 1%;}
+	100%{ top: 5%; }
+}
+
+@font-face {
+	font-family: mario;
+	src: url(fonts/mario.ttf);
+}
+
+@font-face {
+	font-family: normal;
+	src: url(fonts/normal.ttf);
+}
+
+@font-face {
+	font-family: bold;
+	src: url(fonts/bold.ttf);
+}
+
